@@ -22,6 +22,10 @@
         <element xmi:type="uml:Property" href="ahorcado.uml#_YlNWMCqSEee-jayLM1Yv9w"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_YlTc0SqSEee-jayLM1Yv9w"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_Ppu-ECqUEee-jayLM1Yv9w" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="ahorcado.uml#_PpoQYCqUEee-jayLM1Yv9w"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ppu-ESqUEee-jayLM1Yv9w"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_VUw19CqOEee-jayLM1Yv9w"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_VUw19SqOEee-jayLM1Yv9w"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_VUw19iqOEee-jayLM1Yv9w"/>
@@ -58,6 +62,10 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GKvQ5yqQEee-jayLM1Yv9w"/>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_GKvQ6CqQEee-jayLM1Yv9w" type="Class_OperationCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_8iFXwCqTEee-jayLM1Yv9w" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="ahorcado.uml#_8h8N0CqTEee-jayLM1Yv9w"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8iFXwSqTEee-jayLM1Yv9w"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_GKvQ6SqQEee-jayLM1Yv9w"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_GKvQ6iqQEee-jayLM1Yv9w"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_GKvQ6yqQEee-jayLM1Yv9w"/>

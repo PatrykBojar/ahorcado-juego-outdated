@@ -17,13 +17,29 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_YlNWMCqSEee-jayLM1Yv9w" name="tiempoPorFrase" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_PpoQYCqUEee-jayLM1Yv9w" name="vidas" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S2zXACqUEee-jayLM1Yv9w" value="10"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S22aUCqUEee-jayLM1Yv9w" value="10"/>
+    </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_GKsNkCqQEee-jayLM1Yv9w" name="Frase">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_RkFnYCqTEee-jayLM1Yv9w" annotatedElement="_GKsNkCqQEee-jayLM1Yv9w">
+      <body>La clase Frase se ocupará de almacenar diferentes frases para el 
+juego, contendrá distintos métodos que ayudarán al proceso 
+y se ocuparán de seleccionar la frase de forma aleatoria.
+</body>
+    </ownedComment>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_JN0AUCqQEee-jayLM1Yv9w" name="frases" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_etqNECqQEee-jayLM1Yv9w" value="1000"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_etvFkCqQEee-jayLM1Yv9w" value="1000"/>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_8h8N0CqTEee-jayLM1Yv9w" name="elegirFrase">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_CVoOQCqVEee-jayLM1Yv9w" annotatedElement="_8h8N0CqTEee-jayLM1Yv9w">
+        <body>Devuelve una frase aleatoria sacada del array frases.</body>
+      </ownedComment>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_sr4bcCqQEee-jayLM1Yv9w" name="obtiene" memberEnd="_ssBlYCqQEee-jayLM1Yv9w _ssCMcCqQEee-jayLM1Yv9w">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sr5pkCqQEee-jayLM1Yv9w" source="org.eclipse.papyrus">
