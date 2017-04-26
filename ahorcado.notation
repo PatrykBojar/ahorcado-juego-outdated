@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_-z_NICqMEee-jayLM1Yv9w" type="PapyrusUMLClassDiagram" name="Ahorcado" measurementUnit="Pixel">
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_-z_NISqMEee-jayLM1Yv9w" name="diagram_compatibility_version" stringValue="1.2.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_-z_NIiqMEee-jayLM1Yv9w"/>
+  <styles xmi:type="style:PapyrusViewStyle" xmi:id="_-z_NIyqMEee-jayLM1Yv9w">
+    <owner xmi:type="uml:Model" href="ahorcado.uml#_-yYqoCqMEee-jayLM1Yv9w"/>
+  </styles>
+  <element xmi:type="uml:Model" href="ahorcado.uml#_-yYqoCqMEee-jayLM1Yv9w"/>
+</notation:Diagram>
