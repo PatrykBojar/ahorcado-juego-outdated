@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_-yYqoCqMEee-jayLM1Yv9w" name="RootElement">
   <packagedElement xmi:type="uml:Class" xmi:id="_VUuZsCqOEee-jayLM1Yv9w" name="Partida">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_jc13YDmWEeeb4OaL5VXxPw" annotatedElement="_VUuZsCqOEee-jayLM1Yv9w">
+      <body>La clase principal, Partida. Contiene datos sobre la partida que está en curso, tambén tiene un método que es un contador de puntos del jugador.</body>
+    </ownedComment>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_WR828CqOEee-jayLM1Yv9w" name="nombreJugador" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
     </ownedAttribute>
@@ -17,11 +20,11 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_YlNWMCqSEee-jayLM1Yv9w" name="tiempoPorFrase" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
     </ownedAttribute>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_PpoQYCqUEee-jayLM1Yv9w" name="vidas" visibility="private">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S2zXACqUEee-jayLM1Yv9w" value="10"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S22aUCqUEee-jayLM1Yv9w" value="10"/>
-    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_o8BsQCqVEee-jayLM1Yv9w" name="contadorPuntos">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_L6rNkDmWEeeb4OaL5VXxPw" annotatedElement="_o8BsQCqVEee-jayLM1Yv9w">
+        <body>Cuenta los puntos en la partida dependiendo del puntuaje</body>
+      </ownedComment>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_GKsNkCqQEee-jayLM1Yv9w" name="Frase">
     <ownedComment xmi:type="uml:Comment" xmi:id="_RkFnYCqTEee-jayLM1Yv9w" annotatedElement="_GKsNkCqQEee-jayLM1Yv9w">
@@ -49,5 +52,42 @@ y se ocuparán de seleccionar la frase de forma aleatoria.
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZsMo4CqREee-jayLM1Yv9w" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Zs0T8CqREee-jayLM1Yv9w" value="1"/>
     </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_HlnrwCqWEee-jayLM1Yv9w" name="Munieco">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_ZeTxsDmWEeeb4OaL5VXxPw" annotatedElement="_HlnrwCqWEee-jayLM1Yv9w">
+      <body>La clase Munieco almacena los datos necesarios para poder gestionar al muñeco del juego.</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_cB_pUCqWEee-jayLM1Yv9w" name="vida" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dqkwsCqWEee-jayLM1Yv9w" value="6"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dqobECqWEee-jayLM1Yv9w" value="6"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_i3UiYCqWEee-jayLM1Yv9w" name="brazoDerecho" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_lRqd4CqWEee-jayLM1Yv9w" name="brazoIzquierdo" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nsKxcCqWEee-jayLM1Yv9w" name="piernaDerecha" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_qgMYQCqWEee-jayLM1Yv9w" name="piernaIzquierda" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3eO8ACqWEee-jayLM1Yv9w" name="cuerpo" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_yc7v4CqXEee-jayLM1Yv9w" name="dibujar">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_RADzADmWEeeb4OaL5VXxPw" annotatedElement="_yc7v4CqXEee-jayLM1Yv9w">
+        <body>Dibuja o elimina las partes del cuepo del muñeco.</body>
+      </ownedComment>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_rddUUDmVEeeb4OaL5VXxPw" name="tiene" memberEnd="_rdkCADmVEeeb4OaL5VXxPw _rdmeQDmVEeeb4OaL5VXxPw" navigableOwnedEnd="_rdkCADmVEeeb4OaL5VXxPw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rdja8DmVEeeb4OaL5VXxPw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rdja8TmVEeeb4OaL5VXxPw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rdmeQDmVEeeb4OaL5VXxPw" name="partida" type="_VUuZsCqOEee-jayLM1Yv9w" association="_rddUUDmVEeeb4OaL5VXxPw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rdkCADmVEeeb4OaL5VXxPw" name="munieco" type="_HlnrwCqWEee-jayLM1Yv9w" association="_rddUUDmVEeeb4OaL5VXxPw"/>
   </packagedElement>
 </uml:Model>
