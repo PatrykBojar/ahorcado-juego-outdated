@@ -11,10 +11,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_hvregCqOEee-jayLM1Yv9w" name="puntaje" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_ssCMcCqQEee-jayLM1Yv9w" name="frase" type="_GKsNkCqQEee-jayLM1Yv9w" association="_sr4bcCqQEee-jayLM1Yv9w">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aqCxMCqREee-jayLM1Yv9w" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aqe2ECqREee-jayLM1Yv9w" value="1"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_xBLLQCqREee-jayLM1Yv9w" name="limiteFrases" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
       </ownedAttribute>
@@ -26,39 +22,107 @@
           <body>Cuenta los puntos en la partida dependiendo del puntuaje</body>
         </ownedComment>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_lSYBEDsUEee4B8Yxk9i5mg" name="mostrarProgreso"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xLeWADsUEee4B8Yxk9i5mg" name="pedirLetra">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FIHqoDsVEee4B8Yxk9i5mg" name="letra" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Fl-EQDsVEee4B8Yxk9i5mg" name="resolver"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_deXcwDsVEee4B8Yxk9i5mg" name="comprobarFinal">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_o20iwDsVEee4B8Yxk9i5mg" name="fin" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_GKsNkCqQEee-jayLM1Yv9w" name="Frase">
+    <packagedElement xmi:type="uml:Class" xmi:id="_GKsNkCqQEee-jayLM1Yv9w" name="Palabra">
       <ownedComment xmi:type="uml:Comment" xmi:id="_RkFnYCqTEee-jayLM1Yv9w" annotatedElement="_GKsNkCqQEee-jayLM1Yv9w">
         <body>La clase Frase se ocupará de almacenar diferentes frases para el 
 juego, contendrá distintos métodos que ayudarán al proceso 
 y se ocuparán de seleccionar la frase de forma aleatoria.
 </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_JN0AUCqQEee-jayLM1Yv9w" name="frases" visibility="private">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JN0AUCqQEee-jayLM1Yv9w" name="palabraOculta" visibility="private">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Oe5mEDsQEee4B8Yxk9i5mg" annotatedElement="_JN0AUCqQEee-jayLM1Yv9w">
+          <body>Palabra que ha sido escogida para adivinar.
+</body>
+        </ownedComment>
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_etqNECqQEee-jayLM1Yv9w" value="1000"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_etvFkCqQEee-jayLM1Yv9w" value="1000"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_etqNECqQEee-jayLM1Yv9w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_etvFkCqQEee-jayLM1Yv9w" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_8h8N0CqTEee-jayLM1Yv9w" name="elegirFrase">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8QQrYDsPEee4B8Yxk9i5mg" name="letrasFallidas" visibility="private">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_KRa5ADsQEee4B8Yxk9i5mg" annotatedElement="_8QQrYDsPEee4B8Yxk9i5mg">
+          <body>Son las letras que el jugador ha dicho pero no estaban en la palabra.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_5lVhgBydEduyofBvg4RL2w"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A9DxsDsQEee4B8Yxk9i5mg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A9MUkDsQEee4B8Yxk9i5mg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CU3SIDsQEee4B8Yxk9i5mg" name="letrasDescubiertas" visibility="private">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_MKRRADsQEee4B8Yxk9i5mg" annotatedElement="_CU3SIDsQEee4B8Yxk9i5mg">
+          <body>Son las letras que ha dicho el jugador y estaban en la palabra.</body>
+        </ownedComment>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_5lVhgBydEduyofBvg4RL2w"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FmVp8DsQEee4B8Yxk9i5mg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Fmc-sDsQEee4B8Yxk9i5mg" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_8h8N0CqTEee-jayLM1Yv9w" name="elegirPalabra">
         <ownedComment xmi:type="uml:Comment" xmi:id="_CVoOQCqVEee-jayLM1Yv9w" annotatedElement="_8h8N0CqTEee-jayLM1Yv9w">
           <body>Devuelve una frase aleatoria sacada del array frases.</body>
         </ownedComment>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_-5Z0sDsLEeeF3Z4TQelfKw" name="comrpobarLetra">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Yo24oDsQEee4B8Yxk9i5mg" annotatedElement="_-5Z0sDsLEeeF3Z4TQelfKw">
+          <body>Comprueba si existe la letra en la palabra oculta.</body>
+        </ownedComment>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_C8nWADsNEeeF3Z4TQelfKw" name="letra">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_C8n9EDsNEeeF3Z4TQelfKw" annotatedElement="_C8nWADsNEeeF3Z4TQelfKw">
+            <body>Letra a comprobar si existe o no en la palabra a adivinar</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_5lVhgBydEduyofBvg4RL2w"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8mLtgDsOEee4B8Yxk9i5mg" name="estaba" direction="return">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_8mLtgTsOEee4B8Yxk9i5mg" annotatedElement="_8mLtgDsOEee4B8Yxk9i5mg">
+            <body>Devuelve true si la letra está al menos una vez en la palabra oculta y false en caso contrario
+</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Dddj0DsOEeeF3Z4TQelfKw" name="mostrarResultados">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_cdzw8DsQEee4B8Yxk9i5mg" annotatedElement="_Dddj0DsOEeeF3Z4TQelfKw">
+          <body>Muestra el reusltado de la palabra, con sus letras adivinadas y el diseño.</body>
+        </ownedComment>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_XnLR0DsTEee4B8Yxk9i5mg" name="comprobarSiGanador">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bbkJcDsTEee4B8Yxk9i5mg" name="ganado" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_b7UnkDsTEee4B8Yxk9i5mg" name="comprobarPalabra">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_AnRyIDsUEee4B8Yxk9i5mg" annotatedElement="_b7UnkDsTEee4B8Yxk9i5mg">
+          <body>Comprueba si la palabra propuesta por el jugador coincide con la palabra oculta (quiero resolver).</body>
+        </ownedComment>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gOoP0DsTEee4B8Yxk9i5mg" name="palabra">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xf_C4DsTEee4B8Yxk9i5mg" name="adivinada" direction="return">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_xf_C4TsTEee4B8Yxk9i5mg" annotatedElement="_xf_C4DsTEee4B8Yxk9i5mg">
+            <body>Adivinada es verdadero si la palabra coincide con la que buscábamos.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_sr4bcCqQEee-jayLM1Yv9w" name="obtiene" memberEnd="_ssBlYCqQEee-jayLM1Yv9w _ssCMcCqQEee-jayLM1Yv9w">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sr5pkCqQEee-jayLM1Yv9w" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sr6QoCqQEee-jayLM1Yv9w" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_ssBlYCqQEee-jayLM1Yv9w" name="partida" type="_VUuZsCqOEee-jayLM1Yv9w" association="_sr4bcCqQEee-jayLM1Yv9w">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZsMo4CqREee-jayLM1Yv9w" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Zs0T8CqREee-jayLM1Yv9w" value="1"/>
-      </ownedEnd>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_HlnrwCqWEee-jayLM1Yv9w" name="Munieco">
+    <packagedElement xmi:type="uml:Class" xmi:id="_HlnrwCqWEee-jayLM1Yv9w" name="Horca">
       <ownedComment xmi:type="uml:Comment" xmi:id="_ZeTxsDmWEeeb4OaL5VXxPw" annotatedElement="_HlnrwCqWEee-jayLM1Yv9w">
         <body>La clase Munieco almacena los datos necesarios para poder gestionar al muñeco del juego.</body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_cB_pUCqWEee-jayLM1Yv9w" name="vida" visibility="private">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cB_pUCqWEee-jayLM1Yv9w" name="fallos" visibility="private">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_u49doDsQEee4B8Yxk9i5mg" annotatedElement="_cB_pUCqWEee-jayLM1Yv9w">
+          <body>Número de fallos que lleva el usuari, vamos a permitir 6 fallos.</body>
+        </ownedComment>
         <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dqkwsCqWEee-jayLM1Yv9w" value="6"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dqobECqWEee-jayLM1Yv9w" value="6"/>
@@ -83,13 +147,19 @@ y se ocuparán de seleccionar la frase de forma aleatoria.
           <body>Dibuja o elimina las partes del cuepo del muñeco.</body>
         </ownedComment>
       </ownedOperation>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_rddUUDmVEeeb4OaL5VXxPw" name="tiene" memberEnd="_rdkCADmVEeeb4OaL5VXxPw _rdmeQDmVEeeb4OaL5VXxPw" navigableOwnedEnd="_rdkCADmVEeeb4OaL5VXxPw">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rdja8DmVEeeb4OaL5VXxPw" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rdja8TmVEeeb4OaL5VXxPw" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_rdmeQDmVEeeb4OaL5VXxPw" name="partida" type="_VUuZsCqOEee-jayLM1Yv9w" association="_rddUUDmVEeeb4OaL5VXxPw"/>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_rdkCADmVEeeb4OaL5VXxPw" name="munieco" type="_HlnrwCqWEee-jayLM1Yv9w" association="_rddUUDmVEeeb4OaL5VXxPw"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_l-TaUDsREee4B8Yxk9i5mg" name="incrementarFallo">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_KNKZMDsSEee4B8Yxk9i5mg" annotatedElement="_l-TaUDsREee4B8Yxk9i5mg">
+          <body>Aumenta el contador de fallos.</body>
+        </ownedComment>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_fuQjIDsSEee4B8Yxk9i5mg" name="comprobarSiPerdido">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_0CIE8DsSEee4B8Yxk9i5mg" annotatedElement="_fuQjIDsSEee4B8Yxk9i5mg">
+          <body>Comprueba si los fallos han llegado al límite establecido, si es así, la partida terminará, en caso contrario seguirá</body>
+        </ownedComment>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WJGKQDsTEee4B8Yxk9i5mg" name="ganado" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_SU1YIDmXEeeb4OaL5VXxPw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SU30YDmXEeeb4OaL5VXxPw" source="http://www.eclipse.org/uml2/2.0.0/UML">
