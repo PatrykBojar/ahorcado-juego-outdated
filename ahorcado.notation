@@ -188,4 +188,54 @@
     <owner xmi:type="uml:Model" href="ahorcado.uml#_-yYqoCqMEee-jayLM1Yv9w"/>
   </styles>
   <element xmi:type="uml:Model" href="ahorcado.uml#_-yYqoCqMEee-jayLM1Yv9w"/>
+  <edges xmi:type="notation:Connector" xmi:id="_X_wN0ECNEeezYfEIbGXLZA" type="Association_Edge" source="_GKuCwCqQEee-jayLM1Yv9w" target="_VUwO4CqOEee-jayLM1Yv9w">
+    <children xmi:type="notation:DecorationNode" xmi:id="_X_yqEECNEeezYfEIbGXLZA" visible="false" type="Association_StereotypeLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_X_yqEUCNEeezYfEIbGXLZA" y="-20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_X_yqEkCNEeezYfEIbGXLZA" type="Association_NameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_X_zRIECNEeezYfEIbGXLZA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_X_zRIUCNEeezYfEIbGXLZA" visible="false" type="Association_TargetRoleLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_X_zRIkCNEeezYfEIbGXLZA" y="-20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_X_zRI0CNEeezYfEIbGXLZA" visible="false" type="Association_SourceRoleLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_X_zRJECNEeezYfEIbGXLZA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_X_zRJUCNEeezYfEIbGXLZA" type="Association_SourceMultiplicityLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_X_zRJkCNEeezYfEIbGXLZA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_X_zRJ0CNEeezYfEIbGXLZA" type="Association_TargetMultiplicityLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_X_zRKECNEeezYfEIbGXLZA" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_X_w04ECNEeezYfEIbGXLZA"/>
+    <element xmi:type="uml:Association" href="ahorcado.uml#_X-H2IECNEeezYfEIbGXLZA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_X_w04UCNEeezYfEIbGXLZA" points="[732, 249, -643984, -643984]$[647, 190, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YB8mMECNEeezYfEIbGXLZA" id="(0.03293413173652695,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YB8mMUCNEeezYfEIbGXLZA" id="(1.0,0.7023255813953488)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_aDaHoECNEeezYfEIbGXLZA" type="Association_Edge" source="_HloS0CqWEee-jayLM1Yv9w" target="_VUwO4CqOEee-jayLM1Yv9w">
+    <children xmi:type="notation:DecorationNode" xmi:id="_aDausECNEeezYfEIbGXLZA" visible="false" type="Association_StereotypeLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_aDausUCNEeezYfEIbGXLZA" y="-20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_aDauskCNEeezYfEIbGXLZA" type="Association_NameLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_aDaus0CNEeezYfEIbGXLZA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_aDautECNEeezYfEIbGXLZA" visible="false" type="Association_TargetRoleLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_aDautUCNEeezYfEIbGXLZA" y="-20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_aDautkCNEeezYfEIbGXLZA" visible="false" type="Association_SourceRoleLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_aDaut0CNEeezYfEIbGXLZA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_aDauuECNEeezYfEIbGXLZA" type="Association_SourceMultiplicityLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_aDauuUCNEeezYfEIbGXLZA" y="20"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_aDbVwECNEeezYfEIbGXLZA" type="Association_TargetMultiplicityLabel">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_aDbVwUCNEeezYfEIbGXLZA" y="-20"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_aDaHoUCNEeezYfEIbGXLZA"/>
+    <element xmi:type="uml:Association" href="ahorcado.uml#_aDEwcECNEeezYfEIbGXLZA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aDaHokCNEeezYfEIbGXLZA" points="[368, 245, -643984, -643984]$[442, 217, -643984, -643984]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_aEH5UECNEeezYfEIbGXLZA" id="(1.0,0.046511627906976744)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_aEIgYECNEeezYfEIbGXLZA" id="(0.0,0.827906976744186)"/>
+  </edges>
 </notation:Diagram>

@@ -67,6 +67,7 @@ y se ocuparán de seleccionar la frase de forma aleatoria.
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FmVp8DsQEee4B8Yxk9i5mg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Fmc-sDsQEee4B8Yxk9i5mg" value="*"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_X-UqcECNEeezYfEIbGXLZA" name="partida" type="_VUuZsCqOEee-jayLM1Yv9w" aggregation="composite" association="_X-H2IECNEeezYfEIbGXLZA"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_8h8N0CqTEee-jayLM1Yv9w" name="elegirPalabra">
         <ownedComment xmi:type="uml:Comment" xmi:id="_CVoOQCqVEee-jayLM1Yv9w" annotatedElement="_8h8N0CqTEee-jayLM1Yv9w">
           <body>Devuelve una frase aleatoria sacada del array frases.</body>
@@ -142,6 +143,7 @@ y se ocuparán de seleccionar la frase de forma aleatoria.
       <ownedAttribute xmi:type="uml:Property" xmi:id="_3eO8ACqWEee-jayLM1Yv9w" name="cuerpo" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_aDF-kkCNEeezYfEIbGXLZA" name="partida" type="_VUuZsCqOEee-jayLM1Yv9w" aggregation="composite" association="_aDEwcECNEeezYfEIbGXLZA"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_yc7v4CqXEee-jayLM1Yv9w" name="dibujar">
         <ownedComment xmi:type="uml:Comment" xmi:id="_RADzADmWEeeb4OaL5VXxPw" annotatedElement="_yc7v4CqXEee-jayLM1Yv9w">
           <body>Dibuja o elimina las partes del cuepo del muñeco.</body>
@@ -160,6 +162,18 @@ y se ocuparán de seleccionar la frase de forma aleatoria.
           <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
         </ownedParameter>
       </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_X-H2IECNEeezYfEIbGXLZA" name="seAdivina" memberEnd="_X-UqcECNEeezYfEIbGXLZA _X-VRgECNEeezYfEIbGXLZA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_X-S1QECNEeezYfEIbGXLZA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_X-TcUECNEeezYfEIbGXLZA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_X-VRgECNEeezYfEIbGXLZA" name="palabra" type="_GKsNkCqQEee-jayLM1Yv9w" association="_X-H2IECNEeezYfEIbGXLZA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_aDEwcECNEeezYfEIbGXLZA" name="contiene" memberEnd="_aDF-kkCNEeezYfEIbGXLZA _aDGloECNEeezYfEIbGXLZA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aDF-kECNEeezYfEIbGXLZA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aDF-kUCNEeezYfEIbGXLZA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_aDGloECNEeezYfEIbGXLZA" name="horca" type="_HlnrwCqWEee-jayLM1Yv9w" association="_aDEwcECNEeezYfEIbGXLZA"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_SU1YIDmXEeeb4OaL5VXxPw">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SU30YDmXEeeb4OaL5VXxPw" source="http://www.eclipse.org/uml2/2.0.0/UML">
