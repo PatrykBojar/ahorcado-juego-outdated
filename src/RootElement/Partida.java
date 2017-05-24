@@ -4,8 +4,6 @@
 
 package RootElement;
 
-import RootElement.Frase;
-
 /************************************************************/
 /**
  * La clase principal, Partida. Contiene datos sobre la partida que está en curso, tambén tiene un método que es un contador de puntos del jugador.
@@ -22,10 +20,6 @@ public class Partida {
 	/**
 	 * 
 	 */
-	public Frase frase;
-	/**
-	 * 
-	 */
 	private int limiteFrases;
 	/**
 	 * 
@@ -36,5 +30,31 @@ public class Partida {
 	 * Cuenta los puntos en la partida dependiendo del puntuaje
 	 */
 	public void contadorPuntos() {
+	}
+
+	/**
+	 * 
+	 */
+	public void mostrarProgreso() {
+	}
+
+	/**
+	 * 
+	 * @return letra 
+	 */
+	public boolean pedirLetra() {
+	}
+
+	/**
+	 * 
+	 */
+	public void resolver() {
+	}
+
+	/**
+	 * 
+	 * @return fin 
+	 */
+	public boolean comprobarFinal() {
 	}
 };
