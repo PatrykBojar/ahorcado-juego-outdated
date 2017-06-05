@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.notification.RunListener.ThreadSafe;
 
 public class PalabraTest {
 	private Palabra palabraOculta;
@@ -16,6 +17,11 @@ public class PalabraTest {
 	@Test
 	public void testElegirPalabra() {
 		assertNotNull(palabraOculta.elegirPalabra());
+	}
+
+	@Test
+	public void testComprobarLetraUsada() {
+		fail("No implementado");
 	}
 
 }
