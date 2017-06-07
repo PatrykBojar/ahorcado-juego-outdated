@@ -105,6 +105,7 @@ public class Palabra {
 			else
 				System.out.println("_");
 		}
+		System.out.println();
 		System.out.print("Letras acertas: ");
 		for (int i = 0; i < letrasDescubiertas.length; i++) {
 			if (letrasDescubiertas[i] != '\u0000')
