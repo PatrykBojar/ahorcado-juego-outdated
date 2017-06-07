@@ -106,10 +106,10 @@ public class Partida {
 
 		horca = new Horca();
 		palabra = new Palabra();
-		boolean noHaResuletoMal = true;
+		boolean noHaResueltoMal = true;
 		palabra.elegirPalabra();
 
-		while (!comprobarFinal() && noHaResuletoMal) {
+		while (!comprobarFinal() && noHaResueltoMal) {
 			switch (elegirDelMenu()) {
 			case 1:
 				palabra.comprobarLetra(pedirLetra());
@@ -120,7 +120,7 @@ public class Partida {
 					System.out.println("¡Has ganado!");
 				else {
 					System.out.println("Lo siento, has perdido...");
-					noHaResuletoMal = false;
+					noHaResueltoMal = false;
 				}
 				break;
 			case 3:
