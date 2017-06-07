@@ -12,16 +12,15 @@ public class PalabraTest {
 	@Before
 	public void setUp() throws Exception {
 		palabraOculta = new Palabra();
-	}
-
-	@Test
-	public void testElegirPalabra() {
-		assertNotNull(palabraOculta.elegirPalabra());
+		palabraOculta.elegirPalabra();
 	}
 
 	@Test
 	public void testComprobarLetraUsada() {
-		fail("No implementado");
+		palabraOculta.comprobarLetra('j');
+		palabraOculta.comprobarLetra('e');
+		assertTrue(palabraOculta.comprobarLetraUsada('j'));
+		assertFalse(palabraOculta.comprobarLetraUsada('h'));
 	}
 
 }
