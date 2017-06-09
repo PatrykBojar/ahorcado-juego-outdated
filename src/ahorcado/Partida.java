@@ -83,6 +83,12 @@ public class Partida {
 
 	}
 
+	/**
+	 * Menú principal del juego donde el jugador podrá inteerectuar con la
+	 * partida.
+	 * 
+	 * @return devuelve el valor para operar con el menú.
+	 */
 	public static int elegirDelMenu() {
 		Scanner entrada = new Scanner(System.in);
 

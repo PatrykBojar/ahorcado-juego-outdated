@@ -173,6 +173,7 @@ public class Palabra {
 	 * oculta (quiero resolver).
 	 * 
 	 * @param palabra
+	 *            conjunto de letras que forma una palabra para la comprobación.
 	 * @return adivinada Adivinada es verdadero si la palabra coincide con la
 	 *         que buscábamos.
 	 */
