@@ -5,29 +5,20 @@
 package ahorcado;
 
 import java.util.*;
+import java.lang.Character;
 
 /************************************************************/
 /**
  * La clase principal, Partida. Contiene datos sobre la partida que está en
  * curso, tambén tiene un método que es un contador de puntos del jugador.
+ * 
+ * @author Juan y Patryk.
  */
 public class Partida {
 	/**
-	 * 
+	 * Nombre del jugador que se usará para mostrar ciertos datos en la partida.
 	 */
-	private String nombreJugador;
-	/**
-	 * 
-	 */
-	private int puntaje;
-	/**
-	 * 
-	 */
-	private int limiteFrases;
-	/**
-	 * 
-	 */
-	private int tiempoPorFrase;
+	private static String nombreJugador;
 	/**
 	 * 
 	 */
@@ -55,7 +46,8 @@ public class Partida {
 	/**
 	 * Solicita una letra al usuario.
 	 * 
-	 * @return letra
+	 * @return un caracter que posteriormente se insertará en al array
+	 *         correspondiente.
 	 */
 	public static char pedirLetra() {
 
@@ -64,7 +56,7 @@ public class Partida {
 		System.out.print("Introduce una letra: ");
 		char letra = entrada.nextLine().charAt(0);
 
-		return letra;
+		return Character.toLowerCase(letra);
 	}
 
 	/**
@@ -94,19 +86,28 @@ public class Partida {
 	public static int elegirDelMenu() {
 		Scanner entrada = new Scanner(System.in);
 
-		System.out.println("Elige una opcion: ");
-		System.out.println("1. Letra");
-		System.out.println("2. Resolver");
+		System.out.println("\n*--------------------------------*");
+		System.out.println("Elige una opcion para jugar: \n");
+		System.out.println("1. Quiero escribir una letra");
+		System.out.println("2. ¡Quiero resolver!");
 		System.out.println("3. Abandonar");
+		System.out.println("*--------------------------------*");
+
 		return entrada.nextInt();
 
 	}
 
 	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("¿Cuál es tu nombre, valiente?");
+		System.out.print("Mi nombre es... ");
+		nombreJugador = entrada.nextLine();
 
 		horca = new Horca();
 		palabra = new Palabra();
 		boolean noHaResueltoMal = true;
+		System.out.println("\n\nBIEVENIDO AL AHORCADO DE IES SON FERRER");
+		System.out.println("=======================================");
 		palabra.elegirPalabra();
 
 		while (!comprobarFinal() && noHaResueltoMal) {
@@ -115,15 +116,22 @@ public class Partida {
 				palabra.comprobarLetra(pedirLetra());
 				mostrarProgreso();
 				break;
+
 			case 2:
-				if (resolver())
-					System.out.println("¡Has ganado!");
-				else {
+				if (resolver()) {
+					System.out.println("=============");
+					System.out.println("¡Has ganado, " + nombreJugador + "!");
+					System.out.println("=============");
+					// Hacemos esta comprobación para una vez adivinada la
+					// palabra, el juego pare.
+					noHaResueltoMal = false;
+				} else {
 					System.out.println("Lo siento, has perdido...");
 					noHaResueltoMal = false;
 				}
 				break;
 			case 3:
+				System.out.println("¡Eres un cobarde, " + nombreJugador + "!");
 				System.exit(0);
 			default:
 				break;
@@ -131,4 +139,5 @@ public class Partida {
 		}
 
 	}
+
 }
