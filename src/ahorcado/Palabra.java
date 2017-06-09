@@ -10,8 +10,12 @@ package ahorcado;
  * contendrá distintos métodos que ayudarán al proceso y se ocuparán de
  * seleccionar la frase de forma aleatoria.
  * 
+ * @author Juan y Patryk.
  */
 public class Palabra {
+	/**
+	 * El número de letras en el abecedario.
+	 */
 	private static final int NUM_LETRAS_ABECEDARIO = 27;
 	/**
 	 * Palabra que ha sido escogida para adivinar.
@@ -31,7 +35,7 @@ public class Palabra {
 	 * Devuelve una frase aleatoria sacada del array frases.
 	 */
 	public void elegirPalabra() {
-		String[] palabras = { "Jirafa", "Perro", "Gato", "Gallo", "Elefante", "Rata", "Tortuga" };
+		String[] palabras = { "jirafa", "perro", "gato", "gallo", "elefante", "rata", "tortuga" };
 		String elegida = palabras[(int) (Math.random() * (palabras.length - 1))];
 
 		palabraOculta = elegida;
@@ -39,6 +43,11 @@ public class Palabra {
 
 	/**
 	 * Comprueba si la letra ya ha sido usada.
+	 * 
+	 * @param letra
+	 *            Letra que ha introducido el usuario.
+	 * @return true si la letra ya ha sido usada (está en el array de letras
+	 *         descubiertas y fallidas, false en caso contrario.
 	 */
 	public boolean comprobarLetraUsada(char letra) {
 		for (int i = 0; i < letrasDescubiertas.length; i++) {
@@ -67,6 +76,7 @@ public class Palabra {
 	public boolean comprobarLetra(char letra) {
 		if (palabraOculta.indexOf(letra) == -1) {
 			insertarLetra(letra, letrasFallidas);
+			Horca.incrementarFallo();
 			return false;
 		} else {
 			insertarLetra(letra, letrasDescubiertas);
@@ -74,6 +84,16 @@ public class Palabra {
 		}
 	}
 
+	/**
+	 * Inserta una letra introducida por el usuario en el array
+	 * (letrasFallidas/letrasDecubiertas).
+	 * 
+	 * @param letra
+	 *            Letra que introduce el usuario.
+	 * @param destino
+	 *            lo usamos como variable para introducir un array en el que
+	 *            posteriormente se añadirá una letra.
+	 */
 	private void insertarLetra(char letra, char[] destino) {
 		// Inserta la letra en la primera posición vacía.
 		for (int i = 0; i < destino.length; i++) {
@@ -91,7 +111,7 @@ public class Palabra {
 	public void mostrarResultados() {
 		char[] descompueta = palabraOculta.toCharArray();
 
-		System.out.print("Progreso: ");
+		System.out.print("- Progreso: ");
 		for (int i = 0; i < descompueta.length; i++) {
 			boolean estaEnDescubiertas = false;
 			for (int j = 0; j < letrasDescubiertas.length; j++) {
@@ -101,18 +121,18 @@ public class Palabra {
 				}
 			}
 			if (estaEnDescubiertas)
-				System.out.println(descompueta[i]);
+				System.out.print(descompueta[i]);
 			else
-				System.out.println("_");
+				System.out.print("_");
 		}
 		System.out.println();
-		System.out.print("Letras acertas: ");
+		System.out.print("\n- Letras acertadas: ");
 		for (int i = 0; i < letrasDescubiertas.length; i++) {
 			if (letrasDescubiertas[i] != '\u0000')
 				System.out.print(letrasDescubiertas[i]);
 		}
 		System.out.println();
-		System.out.print("Letras falladas: ");
+		System.out.print("- Letras falladas: ");
 		for (int i = 0; i < letrasFallidas.length; i++) {
 			if (letrasDescubiertas[i] != '\u0000')
 				System.out.print(letrasFallidas[i]);
@@ -121,8 +141,10 @@ public class Palabra {
 	}
 
 	/**
+	 * Comprueba si el usuario ha ganado o no.
 	 * 
-	 * @return ganado
+	 * @return true si el usuario ha adivinado todas las letras de la palabra,
+	 *         false en caso contrario.
 	 */
 	public boolean comprobarSiGanado() {
 		boolean estanTodas = true;
@@ -158,4 +180,4 @@ public class Palabra {
 		return (palabraOculta.equals(palabra));
 
 	}
-};
+}
