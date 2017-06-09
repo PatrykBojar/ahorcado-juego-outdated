@@ -5,44 +5,54 @@ package ahorcado;
 
 /************************************************************/
 /**
- * La clase Munieco almacena los datos necesarios para poder gestionar al muñeco
+ * La clase Horca almacena los datos necesarios para poder gestionar el diseño
  * del juego.
+ * 
+ * @author Juan y Patryk.
  */
 public class Horca {
 	protected static final int MAX_FALLOS = 6;
 	/**
-	 * Número de fallos que lleva el usuari, vamos a permitir 6 fallos.
+	 * Número de fallos que lleva el usuario, vamos a permitir 6 fallos.
 	 */
-	private int fallos;
+	private static int fallos;
 
 	/**
-	 * Dibuja o elimina las partes del cuepo del muñeco.
+	 * Inicializamos los fallos a 0 cada vez que empiece una partida;
 	 */
-
-	/**
-	 * 
-	 */
-
 	public Horca() {
 		fallos = 0;
 	}
 
+	/**
+	 * Muestra por pantalla un print con la información de fallos. Además,
+	 * dependiendo de la cantidad de estos mostrará otro print informativo con
+	 * un mensaje específico.
+	 */
 	public void dibujar() {
 		System.out.println("Fallos: " + fallos);
+		if (fallos <= 1 && fallos > 0)
+			System.out.println("Ten cuidado...\n");
+		else if (fallos <= 2 && fallos >= 1)
+			System.out.println("¿Otro fallo más?");
+		else if (fallos <= 4 && fallos >= 2)
+			System.out.println("¡Estás a punto de perder!\n");
+		else if (fallos >= 5)
+			System.out.println("¡¡Te queda una vida!!\n");
 	}
 
 	/**
 	 * Aumenta el contador de fallos.
 	 */
-	public void incrementarFallo() {
+	public static void incrementarFallo() {
 		fallos++;
 	}
 
 	/**
 	 * Comprueba si los fallos han llegado al límite establecido, si es así, la
-	 * partida terminará, en caso contrario seguirá
+	 * partida terminará, en caso contrario seguirá.
 	 * 
-	 * @return ganado
+	 * @return true si los fallos han llegado a 6, false en caso contrario.
 	 */
 	public boolean comprobarSiPerdido() {
 		return (fallos == MAX_FALLOS);
@@ -52,4 +62,4 @@ public class Horca {
 		return fallos;
 	}
 
-};
+}
