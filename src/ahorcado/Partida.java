@@ -68,7 +68,7 @@ public class Partida {
 		Scanner entrada = new Scanner(System.in);
 
 		System.out.print("Introduce la respuesta: ");
-		return palabra.comprobarPalabra(entrada.nextLine());
+		return palabra.comprobarPalabra(entrada.nextLine().toLowerCase());
 
 	}
 
